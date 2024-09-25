@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        html, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 100%;
+           
+        }
+        header {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Adjust as needed */
+            background: url(' https://wallpapercave.com/wp/wp1842345.jpg') no-repeat center center;
+            background-size: cover; /* Ensures the image covers the header */
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+         }
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin: 0;
+        }
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+        }
+        main {
+            padding: 20px;
+        }
+        .services-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        .service img {
+            width: 120px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .service h3 {
+            margin-top: 0;
+            color: red; /* Red headings */
+       }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        footer p {
+            margin: 0;
+        }
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+	<nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+<header>
+    <h1>Our Services</h1>
+</header>
+
+<main>
+    <div class="services-section">
+        <div class="service">
+            <img src="https://th.bing.com/th/id/OIP.Zirk19hz8Lfuaj5cRG2IogAAAA?rs=1&pid=ImgDetMain" alt="Service Icon">
+            <h3>Constructon</h3>
+            <p>At Vatic Solutions, we take pride in our comprehensive construction services that cater to a variety of needs. Whether you’re looking to build from the ground up, renovate an existing space, or manage a complex project, our team of experts is here to guide you every step of the way.<br><br>We do residential construction, commercial construction, project management, design and build and sustainable building. We incorporate eco-friendly practices and materials into our projects to create energy-efficient and environmentally conscious buildings.    </br></br></p>
+        </div>
+        <div class="service">
+            <img src="https://th.bing.com/th/id/OIP._08zQAHRh_Gry8HUyLll4wAAAA?rs=1&pid=ImgDetMain" alt="Service Icon">
+            <h3>Civil</h3>
+            <p>At Vatic Solutions, our civil engineering services are designed to deliver innovative and effective solutions for a wide range of infrastructure projects. Our team of skilled civil engineers is dedicated to ensuring that every project meets the highest standards of quality, safety, and sustainability.<br><br> This includes Infrastructure Development, Site Development, Structural Analysis and Design and Geotechnical Engineering. We provide detailed soil analysis and recommendations for foundation design, ensuring the stability and safety of your projects.   </br></br> </p>
+        </div>
+        <div class="service">
+            <img src="https://www.elco-italy.com/wp-content/uploads/2024/03/technical-support.jpg" alt="Service Icon">
+            <h3>Consulting</h3>
+            <p>Our consulting services are designed to provide expert guidance and innovative solutions tailored to the unique needs of each project. Our team of experienced consultants offers a range of services to help clients navigate the complexities of the construction industry and achieve their project goals with confidence. <br><br>Our consultants work closely to do Strategic Planning,Design and Engineering Advice,Regulatory Compliance, Cost Estimation and Budgeting ans also Risk Management.  </br></br> </p>
+        </div>
+        <div class="service">
+            <img src="https://www.elco-italy.com/wp-content/uploads/2024/03/technical-support.jpg" alt="Service Icon">
+            <h3>Awaiting</h3>
+            <p>.........</p>
+		</div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Vatic Solutions. All rights reserved.</p>
+</footer>
+</body>
+</html>

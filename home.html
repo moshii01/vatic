@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vatic Solutions - Home</title>
+    <style>
+        /* General styles */
+        html, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Light background for contrast */
+            height: 100%;
+        }
+
+        header {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: url('picture.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3); /* Lighter overlay */
+        }
+        
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for readability */
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #333; /* Darker background for navbar */
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        /* Home Section */
+        .home-section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: white; /* White background */
+            margin-top: 50px; /* Offset for fixed nav */
+            position: relative;
+        }
+
+        .home-section h2 {
+            font-size: 2.5rem;
+            color: red; /* Red headings */
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .home-section p {
+            font-size: 1.2rem;
+            color: #555; /* Darker gray for text */
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .home-section .btn {
+            background-color: red; /* Red buttons */
+            color: white; /* White text */
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s; /* Add transform for scale effect */
+        }
+        .home-section .btn:hover {
+            background-color: darkred; /* Darker red hover */
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        /* Expertise, Innovation, Commitment Section */
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0; /* Adjusted margin for spacing */
+            padding: 20px;
+            background-color: #222; /* Dark background */
+        }
+        .info-box {
+            flex: 1 1 300px;
+            background-color: white; /* White box */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+            text-align: left; /* Align text left */
+        }
+        .info-box:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+        }
+        .info-box h2 {
+            color: red; /* Red headings */
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .info-box p {
+            color: #555; /* Dark gray text */
+        }
+
+        /* Icons for info boxes */
+        .info-icon {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 60px 20px;
+            background-color: #ffefef; /* Light pink background */
+            text-align: center;
+        }
+        .testimonial-section h2 {
+            font-size: 2.5rem;
+            color: red; /* Red headings */
+            margin-bottom: 20px;
+        }
+        .testimonial {
+            font-size: 1.2rem;
+            color: #555; /* Dark gray text */
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            border-left: 4px solid red; /* Highlight left border */
+            padding-left: 20px;
+            font-style: italic;
+        }
+
+        /* Contact and Address Section */
+        .contact-address-section {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+        }
+        .contact-address-section h2 {
+            font-size: 2.5rem;
+            color: red; /* Red headings */
+            margin-bottom: 20px;
+        }
+        .contact-address-section p {
+            font-size: 1.2rem;
+            color: #555; /* Dark gray text */
+            margin-bottom: 20px;
+        }
+        .contact-address-section .contact-info, 
+        .contact-address-section .address-info {
+            margin-bottom: 30px;
+        }
+        .contact-address-section .contact-info h3,
+        .contact-address-section .address-info h3 {
+            font-size: 2rem;
+            color: red; /* Red subheadings */
+            margin-bottom: 10px;
+        }
+        .contact-address-section .contact-info p,
+        .contact-address-section .address-info p {
+            font-size: 1.2rem;
+            color: #555; /* Dark gray text */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333; /* Dark footer background */
+            color: white; /* White text */
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <h1>Welcome to Vatic Solutions</h1>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section class="home-section" id="home">
+            <h2>Your Vision, Our Mission</h2>
+            <p>At Vatic Solutions, we are dedicated to turning your ideas into reality. From concept to completion, we ensure that every project is built to perfection with a focus on innovation, quality, and sustainability.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </section>
+
+        <!-- Expertise, Innovation, Commitment Section -->
+        <div class="info-section">
+            <div class="info-box">
+                <img src="expertise-icon.webp" alt="Expertise" class="info-icon">
+                <h2>Expertise</h2>
+                <p>With years of industry experience, Vatic Solutions brings expertise to every project, ensuring precision and quality. Our team comprises highly skilled professionals who bring a wealth of knowledge in project management, engineering, and design. Each member is not only an expert in their respective field but also passionate about driving innovation and excellence in every project we undertake.<br><br>We have successfully completed projects in sectors such as construction, technology, and environmental sustainability, demonstrating our versatility and adaptability. Our clients can trust that with Vatic Solutions, they are partnering with a team that not only understands their vision but also possesses the expertise to turn that vision into reality, delivering results that stand the test of time</br></br></p>
+            </div>
+            <div class="info-box">
+                <img src="Innovation.jpeg" alt="Innovation" class="info-icon">
+                <h2>Innovation</h2>
+                <p>We embrace cutting-edge technology and modern techniques to deliver innovative solutions for a changing world. Our team continuously explores and integrates the latest technologies and methodologies to enhance our service offerings and improve project outcomes. From utilizing advanced project management tools to employing data analytics for informed decision-making, we leverage innovative solutions to optimize efficiency and effectiveness.<br><br>Our commitment to innovation extends to sustainability as well. We actively seek eco-friendly practices and materials that minimize environmental impact, ensuring that our projects contribute positively to the communities we serve. At Vatic Solutions, we don’t just embrace change; we are the change-makers, dedicated to providing our clients with transformative solutions that lead to long-term success.  </br></br></p>
+            </div>
+            <div class="info-box">
+                <img src="commitment-icon.webp" alt="Commitment" class="info-icon">
+                <h2>Commitment</h2>
+                <p>At Vatic Solutions, our commitment to quality, safety, and customer satisfaction is at the heart of everything we do. We invest in continuous training and development for our staff to keep them at the forefront of industry trends and innovations, enabling us to provide cutting-edge solutions tailored to each client's unique needs<br><br>Furthermore, we prioritize open communication and collaboration, maintaining transparency throughout the project lifecycle. This ensures that our clients are informed and involved every step of the way, fostering strong partnerships built on trust and mutual respect</br></br></p>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <section class="testimonial-section">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">"Vatic Solutions transformed our project from concept to completion seamlessly! Highly recommended!"</div>
+            <div class="testimonial">"Their attention to detail and commitment to quality is unparalleled. A fantastic team!"</div>
+            <div class="testimonial">"Working with Vatic Solutions was a breath of fresh air. They truly understand client needs and deliver beyond expectations!"</div>
+        </section>
+
+        <!-- Contact and Address Section -->
+        <section class="contact-address-section" id="contact">
+            <h2>Reach out on our:</h2>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: vaticsolutions@vactic.co.site</p>
+                <p>Phone: 073 954 3861</p>
+            </div>
+            <div class="address-info">
+                <h3>Our Address</h3>
+                <p>27 Rose-Etta Street</p>
+                <p>Pretoria West</p>
+                <p>Gauteng</p>
+                <p>0183</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vatic Solutions. All rights reserved.</p> 
+    </footer>
+
+</body>
+</html>

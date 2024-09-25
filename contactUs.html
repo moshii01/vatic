@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        html, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 100%;
+        }
+		header {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Adjust as needed */
+            background: url('https://www.pdsvehicleinspections.com.au/wp-content/uploads/2015/09/contact_us_background-1080x609.jpg') no-repeat center center;
+            background-size: cover; /* Ensures the image covers the header */
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+         }
+       
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin: 0;
+        }
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 80px); /* Adjust height based on header/footer size */
+            padding: 20px;
+        }
+        .contact-form {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 900px;
+            width: 100%;
+            animation: slideInUp 1.5s ease-out; /* Slide-in-up effect for contact form */
+        }
+        .contact-form h2 {
+            margin-top: 0;
+            color: red; /* Red heading color */
+            animation: fadeIn 2s ease-in-out; /* Fade-in effect for heading */
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            animation: fadeIn 2s ease-in-out; /* Fade-in effect for form fields */
+        }
+        .contact-form button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            animation: fadeIn 2s ease-in-out; /* Fade-in effect for button */
+        }
+        .contact-form button:hover {
+            background-color: darkred;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            .contact-form {
+                padding: 15px;
+            }
+            .contact-form h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <div class="contact-form">
+            <h2>Contact-form</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vatic Solutions. All rights reserved.</p>
+    </footer>
+</body>
+</html>
